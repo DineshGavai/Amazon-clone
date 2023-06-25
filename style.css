@@ -2,18 +2,20 @@
   padding: 0;
   margin: 0;
   font-family: arial;
+  /* border: 1px solid red;   */
 }
-
 .navbar {
-  height: 60px;
+  /* height: 4rem; */
   background-color: #0f1111;
   color: white;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
 .nav-logo {
   height: 50px;
-  width: 113px;
+  width: 6rem;
   cursor: pointer;
 }
 .logo {
@@ -50,7 +52,7 @@
 /* box 3 */
 .nav-search {
   display: flex;
-  width: 778px;
+  width: 55%;
   height: 40px;
   justify-content: space-evenly;
   margin-left: 10px;
@@ -67,6 +69,8 @@
 .search-box {
   width: 100%;
   border: none;
+  border-style: none;
+  outline: none;
 }
 
 .search-logo {
@@ -161,12 +165,15 @@
 /* panel */
 
 .panel {
+  position: relative;
   height: 2.3rem;
   background-color: #131921;
   opacity: 0.9;
   color: white;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 0.4rem;
 }
 .panel-all {
   cursor: pointer;
@@ -177,6 +184,12 @@
   margin-left: 1.2rem;
   font-size: 14px;
   font-weight: 700;
+}
+.panel-links {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .panel i {
   margin: 5px;
@@ -193,10 +206,13 @@
 /* main */
 .main {
   background-image: url("background_image.jpg");
-  height: 350px;
+  /* height: 350px; */
+  height: 21rem;
   background-size: cover;
   display: flex;
   justify-content: center;
+  width: 100%;
+  max-width: 100%;
 }
 .main-text {
   /* align-self: flex-end; */
@@ -210,7 +226,7 @@
   margin-right: 20px;
   margin-left: 20px;
   margin-bottom: 30px;
-  top: 280px;
+  top: 80%;
 }
 
 .main-text a {
@@ -266,6 +282,7 @@
   margin-bottom: 1rem;
   background-size: cover;
   cursor: pointer;
+  max-width: 100%;
 }
 .box-content {
   margin-left: 1rem;
@@ -345,15 +362,17 @@
 /* footer */
 
 .footer {
-  height: 440px;
+  height: 100%;
   background-color: #232f3e;
   display: flex;
   justify-content: space-evenly;
+  max-width: 100%;
+  padding: 0.3rem 4rem 4rem 4rem;
 }
 
 .footer-box {
-  height: 300px;
-  width: 200px;
+  height: 100%;
+  width: 12rem;
   margin-top: 50px;
   color: white;
 }
@@ -374,4 +393,112 @@
 
 .footer-box a:hover {
   text-decoration: underline;
+}
+
+.end {
+  /* height: 4rem; */
+  border: 2px solid black;
+  background-color: #232f3e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+.end .logo {
+  background-image: url("amazon_logo.png");
+  width: 8rem;
+  height: 3.5rem;
+  background-size: cover;
+}
+.end-button {
+  width: 50%;
+  display: flex;
+}
+.button-1 {
+  height: 3rem;
+  width: 100%;
+  max-width: 100%;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+.end-button a {
+  text-decoration: none;
+  color: #cccccc;
+  font-size: 13px;
+}
+.button-1 p {
+  color: white;
+  margin-right: 15px;
+}
+
+@media (max-width: 450px) {
+  .navbar {
+    flex-wrap: wrap;
+    height: 100%;
+    max-height: 100%;
+
+    /* flex-direction: column; */
+  }
+  .address {
+    display: none;
+  }
+  .nav-search {
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 50%;
+    max-width: 100%;
+    /* width:50%; */
+  }
+  .sign-in {
+    display: none;
+  }
+
+  .america {
+    display: none;
+  }
+  .orders {
+    display: none;
+  }
+  .panel {
+    height: 100%;
+  }
+  .content-1 {
+    flex-direction: column;
+  }
+  .left-arrow {
+    top: 30%;
+    left: 5%;
+  }
+  .right-arrow {
+    position: absolute;
+    top: 30%;
+    left: 85%;
+  }
+  .main-text {
+    height: 2.5rem;
+    margin-bottom: 2rem;
+    top: 70%;
+  }
+  .box {
+    width: 100%;
+  }
+  .main {
+    width: 100%;
+    height: 20rem;
+    background-position: center;
+  }
+  .panel {
+    display: block;
+    height: 3rem;
+  }
+  .panel-links {
+    display: none;
+  }
+  .end-button {
+    flex-wrap: wrap;
+  }
 }
